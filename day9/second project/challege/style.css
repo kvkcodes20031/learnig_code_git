@@ -3,9 +3,185 @@
   padding: 0;
   box-sizing: border-box;
   max-width: 1440px;
+  
 }
 body{
-  background-color: hsla(241, 100%, 89% );
+  background-color: hsla(221, 100%, 89%, 0.5 );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  
+
+}
+
+
+
+body > div{
+  background-color: hsl(0, 0%, 100%);
+  /* width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* the above comment shows another way to place the center-div at the center */
+  display: flex;
+  height: 400px;
+  width: 600px;
+  border-radius: 30px;
+}
+#left-div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 400px;
+  width: 300px;
+  color: hsl(0, 0%, 100%); ;
+  align-items: center;
+  padding-top: 0%;
+  background: linear-gradient(to bottom, hsl(256, 81%, 54%), hsl(241, 72%, 46%));
+  border-radius: 30px;
+  position: relative;
+  padding: 30px
+  }
+  #circle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    width: 150px;
+    height: 150px;
+    
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    color: hsl(0, 0%, 100%);
+    margin-top: 40px;
+    margin-bottom: 30px;
+    
+  
+  }
+  #circle .boldnumber{
+    font-size: 50px;
+    font-weight: bolder;
+  }
+
+  #circle .pc{
+    font-weight: bold;
+   
+    color:  rgb(120, 103, 166) 
+  }
+  .your-result{
+    display: flex;
+    margin-bottom: 50px;
+    position: absolute;
+    top: 30px;
+    color: rgb(185, 180, 180);
+    font-size: 16;
+    
+  }
+  .great{
+    font-size: 20px;
+    margin-bottom: 25px;
+
+  }
+  .last-text{
+     color: rgb(148, 145, 145);
+    font-size: 16;
+     word-wrap: break-word;
+     width: 200px;
+
+
+  }
+  #right-Div{
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    justify-content: space-evenly;
+    padding: 20px;
+
+  }
+  .space-button{
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    width: 240px;
+    font-size: 15;
+    font-family:  Arial, Helvetica, sans-serif;;
+    
+    border: none;
+     
+  }
+  .pc {
+    color: rgb(160, 138, 138);
+
+  }
+
+#button1{
+    background-color: hsla(0, 100%, 67% ,0.15)
+  }
+  
+  #button1  .color{
+    color:  hsla(0, 100%, 67%);
+  }
+  #button2{
+    background-color: hsl(39, 100%, 56%, 0.2);
+
+
+  }
+  #button2 .color{
+    color:  hsl(39, 100%, 56%, 0.9);
+
+  }
+  
+   #button3{
+    background-color: hsl(166, 100%, 37%, 0.2)
+
+
+  }
+  #button3 .color{
+    color:  hsl(166, 100%, 37%, 0.9)
+  }
+
+   #button4{
+    background-color: hsla(234, 85%, 45%,0.2 )
+
+  }
+  #button4 .color{
+    color:  hsla(234, 85%, 45%, 0.9)
+  }
+
+ #Continue{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 90px;
+    padding-right:90px ;
+    border-radius: 40px;
+    background-color:hsl(224, 30%, 27%) ;
+    color: hsl(0, 0%, 100%)
+    
+    
+ 
+  }
+
+#right-Div > p{
+  
+  align-self: self-start;
+  margin-left: 13px;
+  font-size: 20px;
+  font-weight: bolder;
+
+}
+pre{
+  font: 40px;
+  font-weight: bold;
+
 }
 
 

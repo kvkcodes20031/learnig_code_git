@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUMBER GUESSING GAME
+  </title>
+  <style>
+    html{
+      font-family: sans-serif;
+
+    }
+    bady{
+      width: 50%;
+      max-width: 800px;
+      min-width: 480px;
+      margin: 0 auto;
+    }
+    .form input[type="number"]{
+      width: 200px;
+    }
+    .lastResult{
+      color: white;
+      padding: 3px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>NUMBER GUESSING GAME</h1>
+  <p>
+    we have selected a rondom number between 1 and 100. see if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.
+  </p>
+  <div class="form">
+<label for="guessField">enter a guess</label>
+<input type="number" min="1" max="100" required id="guesssField" class="guessField">
+
+  </div>
+
+  <div class="resultparas" >
+     <p class="guesses"></p>
+     <p class="lastResult"></p>
+     <p class="lowOrHi"></p>
+  </div>
+<script>
+  let randomnumber = math.floor(math.random()*100) + 1
+  const guesses = document.querySelector('.guesses')
+  const lastResultn = document.querySelector('.lastResult');
+  const lowOrhi = document.querySelector('.lowOrHi');
+
+  const guessSubmit = document.querySelector('.guessSubmit');
+  const guessField = document.querySelector('.guessField');
+
+  let guessCount = 1;
+  let resetbutton;
+  function checkGuess() {
+    console.log
+  }
+  function checkGuess(){
+    const userGuess = Number(guessField.value);
+    
+    }
+    if (guessCount === 1){
+      guesses.textContent = "previous guesses"
+    }
+</script>   
+
+</body>
+</html>

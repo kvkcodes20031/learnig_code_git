@@ -7,28 +7,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
+  <div id="mainDiv">
       <div id="left-div">
         <p class="your-result">Your Result</p>
-            <div class="circle">
+            <div id="circle">
               
-              <p>76</p>
-              <p>of 100</p>
+              <p class="boldnumber">76</p>
+              <p class="pc">of 100</p>
             </div>
-        <p>Great</p>
+        <p class="great">Great</p>
 
-        <p>You scored higher than 65% of the people who hqve taken these teste.</p>
-
-      </div >
+        <pre> <p class="last-text">You scored higher than 65% of 
+  the people who hqve taken 
+          these teste.</p>
+        </pre>
+      </div>
         
-      <div>
+      <div id="right-Div">
       <p>Summary</p>
-          <div>
-            <button>Reaction 80/<b>100</b></button>
-            <button>Memory 92/<b>100</b></button>
-            <button>Verbal 61/ <b>100</b> </button>
-            <button>Visual  73/ <b>100</b></button>
-            <button>Continue</button>
+          
+            <button class="space-button" id="button1"><pre><img src="icon-reaction.svg" alt=""> <b class="color">Reaction </b>       <b>80</b><b class="pc"> / 100</b></pre></button>
+            <button class="space-button" id="button2"><pre><img src="icon-memory.svg" alt=""> <b class="color">Memory</b>          <b>92</b><b class="pc"> / 100</b></pre></button>
+            <button class="space-button" id="button3"><pre><img src="icon-verbal.svg" alt=""> <b class="color">verbal</b>          <b>61</b><b class="pc"> / 100</b> </pre></button>
+            <button class="space-button" id="button4"><pre> <img src="icon-visual.svg" alt=""> <b class="color">visual</b>         <b>73 </b><b class="pc"> /100</b></pre></button>
+
+            <button id="Continue">Continue</button>
           </div>
         
       </div>
