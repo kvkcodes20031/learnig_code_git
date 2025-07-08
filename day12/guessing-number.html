@@ -4,44 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>number guessing game</title>
+  <style>
+    html{
+      font-family: sans-serif;
+
+    }
+    body{
+      width: 50%;
+      max-width: 800px;
+      min-width: 480px;
+      margin: 0 auto;
+    }
+    .form input[type="number"]{
+      width: 200px;
+    }
+    .lastResult{
+      color: white;
+      padding: 3px;
+    }
+
+
+  </style>
 </head>
 <body>
-  /*
-<!-- <h1>Number Guessing Game</h1>
+  <h1>NUMBER GUESSING GAME</h1>
+  <p>
+    we have selected a rondom number between 1 and 100. see if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.
+  </p>
+  <div class="form">
+<label for="guessField">enter a guess</label>
+<input type="number" min="1" max="100" required id="guessField" class="guessField">
 
-<input type="number" min="1" max="100" class="input" class="userGuess">
+<input type="submit" value="submit guess" class="guessSubmit" onclick="">
 
-<input type="submit" name="submit-guess" id="submit" class="input">
+  </div>
 
-<p class="resultCount"></p>
-<p class="resultmessage"></p>
+  <div class="resultparas" >
+     <p class="guesses"></p>
+     <p class="lastResult"></p>
+     <p class="lowOrHi"></p>
+  </div>
 
-<script>
-  let computerGuess = math.floor(math.random()*100+1);
-  const guesses = document.querySelector('.userGuess');
-
-  const result = document.querySelector('.resultCount');
-
-  const guessresult = document.querySelector('.resultmessage');
-
+<body>
   
 
-  function guessnumber (){
-    if (userGuess === computerGuess ){
-     resultCount.textcontent = userGuess;
-     resultmessage.textcontent ='great you won'
-     result
-
-     
-    }
-    else{
-       
-    }
-
-  } -->*/
-
 <script>
-  random.floor(Math.random()*10+1);
+  
   
 </script>
 </body>
