@@ -1,0 +1,33 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+.center-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: auto;
+  align-items: center;
+  width: 50%;
+  background-color: blue;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.big-image{
+  width: 100%;
+  height: auto;
+  display: block;
+
+
+}
+
+
+
