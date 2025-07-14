@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <script>
+    const objt = {
+      foo:1,
+      bar:2
+    };
+    for(const[key, val] of Object.entries(objt)){
+      console.log(key, val);
+    };
+    let i = 0;
+
+    const arr =[1, 2, 3, 4, 5];
+    
+    for(  i in arr){
+      console.log (i);
+    }
+
+    for(i of arr){
+      console.log(i);
+    }
+     let name =  'john'
+     for(let j=0; j<5; j++) {
+      console.log(j,name);
+     }
+
+     let n;
+function factorial(n){
+  n =5
+  if(n===0 || n===1){
+    return 1;
+  } else{
+    return 5 * factorial(n-1)
+  }
+}
+
+
+
+  </script>
+  
+</body>
+</html>

@@ -2,32 +2,138 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
+  
 }
 body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
+  width: 100vw;
+ background-color:hsl(223, 100%, 94%) ;
+
+  background-image: url(pattern-background-mobile.svg);
+  background-position: fixed;
+  
+  background-repeat: no-repeat;
+  background-size:cover;
+  
+
 
 }
 .center-div{
+  background-color:hsl(225, 100%, 98%);
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: auto;
   align-items: center;
-  width: 50%;
-  background-color: blue;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  width: 100%;
+
+  border-radius: 30px;
+   height: auto;
+   
+}
+
+.image-div{
+  width: 100%;
 }
 .big-image{
   width: 100%;
   height: auto;
-  display: block;
+  
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-bottom: 30px;
+  
+
+}
+
+
+
+
+.middle-p {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  
+}
+
+
+
+.middle-p > p{
+  font-size: 1.5rem;
+  
+}
+
+.middle-div{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5%;
+  background-color:hsl(220, 100%, 96%);
+  border-radius: 1ch;
+  margin-left: 0%;
+  
+
+    
+  }
+
+  .bold{
+display: flex;
+flex-direction: column;
+
 
 
 }
 
 
 
+  .small-image{
+    width: 10%;
+    height:10% ;
+    border-radius: 50%;
+    margin-top: 2%;
+    margin-right: 5%;
+
+  }
+
+ .middle-div a{
+    width: 20%;
+    display: flex;
+    
+  
+  
+    
+  }
+
+button{
+  height: auto;
+  border: none;
+  border-radius: 5px;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 2rem;
+  background-color: hsl(245, 75%, 52%)
+;
+color: white;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+;
+  
+}
+
+button :hover{
+  background-color: hsl(224, 23%, 55%);
+}
+
+.center-div >a{
+
+  text-decoration: none;
+
+
+}

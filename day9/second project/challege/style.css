@@ -2,9 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1440px;
+
   
 }
+@media (max-width: 1024px){
+
+.mainDiv{
+  display: flex;
+  flex-direction:column;
+  z-index: 1000px;
+}
+
+  .left-div{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 200px;
+  width:150px;
+  color: hsl(0, 0%, 100%); ;
+  align-items: center;
+  padding-top: -40%;
+  background: linear-gradient(to bottom, hsl(256, 81%, 54%), hsl(241, 72%, 46%));
+  border-radius: 30px;
+  position: inherit;
+  padding: 30px
+  }
+}
+
+
 body{
   background-color: hsla(221, 100%, 89%, 0.5 );
   display: flex;
@@ -183,5 +208,4 @@ pre{
   font-weight: bold;
 
 }
-
 
