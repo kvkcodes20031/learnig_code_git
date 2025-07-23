@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>address book</title>
+</head>
+
+<body>
+  <label for="first-name">first Name</label>
+  <input type="text" id="firstName" placeholder="first Name">
+  <label for="">last Name</label>
+  <input type="text" id="lastName" placeholder="last Name">
+  <label for="">phone</label>
+  <input type="number" id="phone" placeholder="phone number">
+  <label for="">Email</label>
+  <input type="email" id="persEmail" placeholder="Email">
+  <label for="">Address</label>
+  <input type="text" id="persAddress" placeholder="Address">
+  <label for="">Birthday</label>
+  <input type="date" id="Bday" placeholder="Birthday">
+  <button class="save">save</button>
+  <input type="text"  id="inPut">
+  
+  
+  <p id="Friends"></p>
+  
+  <script>
+
+ 
+    person = {
+    
+    }
+    // console.log(JSON.parse(localStorage.getItem('person')));
+
+    localStorage.getItem('object')
+    console.log(localStorage.getItem('object'))
+
+    function undeFined() {
+      
+    let psnfirstName = document.getElementById('firstName');
+    psnfirstName.value;
+      // console.log(psnfirstName.value);
+    
+  
+    let psnlastName = document.getElementById('lastName');
+        psnlastName.value;
+        // console.log(psnlastName.value)
+  
+    let phonecontact = document.getElementById('phone');
+        phonecontact.value;
+    
+    let emailAddress = document.getElementById('persEmail');
+        emailAddress.value;
+    let personAddress = document.getElementById('persAddress');
+        personAddress.value;
+    let DOB = document.getElementById('Bday');
+        DOB.value;
+       
+      person.firstName = psnfirstName.value,
+       person.lastName = psnlastName.value,
+       person.name = function(){
+          return this.firstName + '  ' + this.lastName;
+         
+        },
+         name =person.name();
+        
+       person.contact = phonecontact.value
+       person. Email = emailAddress.value
+       person.Address = personAddress.value
+       person.DateOfBirth = DOB.value
+    
+    console.log(psnfirstName.value, psnlastName.value, phonecontact.value, emailAddress, personAddress, DOB.value, person.name() );
+
+    console.log(person)
+    let storagefield = document.getElementById('Friends');
+    let StorePerson = storagefield
+
+    storagefield.innerHTML += `Name:<b style = "color: red;">${person.name()} </b> <br>First Name: ${person.firstName} <br> <br>last Name:${person.lastName} 
+    <br><br> Contact: ${person.contact} <br> <br>Email:${ person. Email} <br><br> Adress: ${person.Address} <br><br> Birthday:${person.DateOfBirth}`
+    JSONstring = JSON.stringify(person);
+    
+    // localStorage.setItem('oject', 'student');
+    
+    
+
+
+      }
+    
+     const saveButton = document.querySelector('.save');
+     saveButton.addEventListener('click',undeFined );
+    
+//     let student = {
+//       name: 'valerie',
+//       num: 111,
+//       class: 2,
+//       age: 20
+
+//     }
+     
+//      let people = [];
+//      let person = {};
+     
+//      let AdrressBook = document.querySelector('.Friends');
+//     // function getingpeople() {
+//     //   // let id = prompt(`your id please`);
+//     //   // let usrname = prompt(`what is your name`);
+//     //   let usertel = prompt(`what is your contact`);
+//     //   let classN = prompt(`what class are you`);
+
+//     //   //  person = {
+//     //   //   // Id: id,
+//     //   //   // firstName,
+//     //   //   // name: usrname,
+//     //   //   contact: usertel,
+//     //   //   className: classN
+        
+
+//     //   // }
+//     // person = {
+//     //     // Id: id,
+//     //     // firstName,
+//     //     // name: usrname,
+//     //     contact: usertel,
+//     //     className: classN
+      
+
+//     //   }
+
+//     //   people.push(person);
+
+//     // }
+
+//     // for (let i = 0; i < 1; i++) {
+//     //   getingpeople()
+      
+//     // }
+
+
+//     function getingpeople() {
+      
+       
+//        person.firstName = psnfirstName,
+//        person.lastName = psnlastName,
+//        person.name = function(){
+//           return this.firsName + '' + this.lastName;
+//         },
+//        person.contact = phonecontact
+//        person. Email = emailAddress,
+//        person.Address = personAddress,
+//        person.DateOfBirth = DOB;
+    
+      
+   
+//         people.push(person.value);
+    
+   
+    
+
+       
+//         console.log(person.firsName, person.lastName);
+//         console.log(person);
+//         AdrressBook.innerHTML= `Name: ${person.name} <br>
+//                                contact: ${person.contact}`
+//     }
+   
+//     const saveButton = document.querySelector('.save');
+//     saveButton.addEventListener('click', getingpeople)
+
+    
+//      inputfield = document.querySelectorAll('input');
+
+
+// //     //  inputfield.forEach(input => {
+// //     //  input.addEventListener('input', )
+// // });     
+ 
+ </script>
+
+</body>
+
+</html>

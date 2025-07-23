@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arrays</title>
+  <style>
+    .product-div{
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      
+
+    }
+     button{
+      margin-top: 2%;
+      gap: 2%;
+      
+    }
+    #product-list{
+      display: flex;
+      justify-content: space-between;
+      
+      width: 100%;
+      
+    }
+    h1{
+      color: blue;
+      text-align: left;
+    }
+    #remove-items{
+      display: flex;
+      width: 50%;
+      background-color:;
+    }
+  .result-forchoice{
+    background-color: white;
+    margin-left: 5%;
+  }
+  .button{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+
+  }
+  #result-forchoice{
+    background-color: rgb(250, 252, 253);
+    width: 50%;
+    height: 100%;
+  }
+  .removeitems{
+    width: 50%;
+    
+  }
+   #removeitems #result-forchoice H2{
+    font-size:.5rem;
+    color: rgb(214, 214, 227);
+    text-align: center;
+   }
+  </style>
+</head>
+<body>
+  
+<!-- 
+  <button onclick=" additem('Foot ball');" data-product="product1">Foot ball</button>
+  <button onclick=" additem('Hand ball');" data-product="product2">Hand ball</button>
+  <button onclick=" additem('trousers');" data-product="product3">Troussers</button>
+  <button onclick=" additem('snikers');" data-product="product4">snikers</button>
+  <button onclick=" additem('git');"data-product="product5">git </button>
+  <button onclick=" additem('git');"data-product="product5">git </button>
+  <button onclick=" additem('phone');" data-product="product6">phone</button>
+  <button onclick=" additem('Tv');" data-product="product7">Tv</button>
+  <button onclick=" additem('T-shirt');"data-product="product8">T-shirt</button>
+  <button onclick=" additem('Radio');" data-product="product9">radio</button>
+  <button onclick=" additem('head-set');"class="product10"> head-set</button>
+    </div> --> -->
+   
+   
+   <h1>PRODUCT LIST</h1>
+    <div id="product-list">
+  <div class="product-div">
+  <button data-product="Foot ball">Foot ball</button>
+  <button data-product="Hand ball">Hand ball</button>
+  <button data-product="Troussers">Troussers</button>
+  <button data-product="snikers">snikers</button>
+  <button data-product="git">book</button>
+  <button data-product="belt">bible</button>
+  <button data-product="phone">phone</button>
+  <button data-product="Tv">Tv</button>
+  <button data-product="-shir">T-shirt</button>
+  <button data-product="radio">radio</button>
+  <button data-product="head-set"> head-set</button>
+    </div>
+
+
+    <div id="remove-items" >
+
+                
+                <div id="result-forchoice">
+                  <h5>ITEMS ITEMS IN THE CART</h2>
+                  <p class="result-forchoice"></p>
+                </div>
+                <div class="button">
+                  <button onclick="removeItem('Foot ball')"  class="remove-items">Remove Foot ball</button>
+                  <button onclick="removeItem('Hand ball')"  class="remove-items">Remove Hand ball</button>
+                  <button onclick="removeItem('Troussers')"  class="remove-items">Remove Troussers</button>
+                  <button onclick="removeItem('snikers')"  class="remove-items">Remove snikers</button>
+                  <button onclick="removeItem('book')"  class="remove-items">Remove book</button>
+                  <button onclick="removeItem('bible')"  class="remove-items">Remove bible</button>
+                  <button onclick="removeItem('phone')"  class="remove-items">Remove phone</button>
+                  <button onclick="removeItem('Tv')"  class="remove-items">Remove Tv</button>
+                  <button onclick="removeItem('T-shirt')"  class="remove-items">Remove T-shirt</button>
+                  <button onclick="removeItem('radio')"  class="remove-items">Remove radio</button>
+          
+          
+          
+          
+          
+          
+                  <button onclick="removeItem('head-set')"  class="remove-items">Remove head-set</button>
+                </div>
+                
+          
+        </div>
+    </div>
+</div>
+  <script>
+    
+    // let product1  = document.querySelector('.product1');
+    // let product2 = document.querySelector('.product2');
+    // let product3 = document.querySelector('.product3');
+    // let product4 = document.querySelector('.product4');
+    // let product5 = document.querySelector('.product5');
+    // let product6 = document.querySelector('.product6');
+    // let product7 = document.querySelector('.product7');
+    // let product8 = document.querySelector('.product8');
+    // let product9 = document.querySelector('.product9');
+    // let product10 = document.querySelector('.product10');
+    let shoppingCart = [];
+      
+
+    function additem(choice){
+
+     shoppingCart.push(choice)
+      // document.body.innerHTML = shoppingCart;
+      console.log(shoppingCart)
+      updatedisplay()
+
+
+    }
+    function removeItem(productName){
+      let index = shoppingCart.indexOf(productName);
+      if(index !== -1){
+      shoppingCart.splice(index, 1);
+      console.log()
+      updatedisplay()
+    }
+    
+  }
+    // let removeButton = document.querySelectorAll('.remove-items')
+    // removeButton.addEventListener('click' removeItem)
+ 
+    // let product = document.querySelector('.product');
+    
+    // function collectData(){
+    //   const productId = event.target;
+    //   if (product === product1){
+    //     additem('football');
+    //   }
+    //   else if (product === product2){
+    //     additem('hand ball');
+    //   }
+    //   else if (product === product3){
+    //     additem('troussers');
+    //   }
+    //   else if (product === product4){
+    //     additem('snikers');
+    //   }
+      
+    //   else if (product === product5){
+    //     additem('gift');
+    //   }
+    //   else if (product === product6){
+    //     additem('phone');
+    //   }
+    //   else if (product === product7){
+    //     additem('Tv');
+    //   }
+    //   else if (product === product8){
+    //     additem('T-shirt');
+    //   }
+    //   else if (product === product9){
+    //     additem('radio');
+    //   }
+    //    else {
+    //     additem('head-sets');
+    //   }
+    
+    // }
+   function updatedisplay(){
+   const mapitems = new Map()
+   shoppingCart.forEach(item => {mapitems.set(item, (mapitems.get(item) || 0) + 1);});
+
+   let display = '';
+   mapitems.forEach((count, item) => {
+    
+    console.log(`${item} x ${count}`);
+    display += `${item} x ${count} <br>` ;
+
+
+   });
+
+
+    let result = document.querySelector('.result-forchoice');
+    result.innerHTML = display
+    
+  }
+  const allbuttons = document.querySelectorAll('button[data-product]');
+   allbuttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const productName = button.dataset.product;
+      additem(productName);
+    });
+   });
+
+  console.log(shoppingCart)
+
+
+
+  
+
+
+  // product.addEventListener('click', collectData);
+
+  // console.log(shoppingCart)
+ 
+
+  //  result.textContent= shoppingCart;
+
+    // product1.addEventListener('click', additem('foot ball'));
+    // product2.addEventListener('click', additem('hand ball'));
+    // product3.addEventListener('click', additem('trousers')) ; 
+    // product3.addEventListener('click', additem('snikers'));  
+    // product3.addEventListener('click', additem('gift'))  ;
+    // product3.addEventListener('click', additem('hone')) ; 
+    // product3.addEventListener('click', additem('tv'))  ;
+    // product3.addEventListener('click', additem('T-shirt')) ; 
+    // product3.addEventListener('click', additem('Radio'));  
+    // product3.addEventListener('click', additem('head set'))  ;
+    
+    
+
+     // let ask_name = prompt('what is your name');
+    // if(!ask_name){
+    //   alert('there is no human being without a name')
+      
+    // }else{
+    //   prompt('what is your school')
+      
+    // }
+
+    // additem('bread');
+    //  additem('pre');
+    //  additem('phone');
+
+//     function collectData(event) {
+  
+
+//   switch (productId) {
+//     case 'product1':
+//       additem('football');
+//       break;
+//     case 'product2':
+//       additem('hand ball');
+//       break;
+//     case 'product3':
+//       additem('trousers');
+//       break;
+//     case 'product4':
+//       additem('sneakers');
+//       break;
+//     case 'product5':
+//       additem('gift');
+//       break;
+//     case 'product6':
+//       additem('phone');
+//       break;
+//     case 'product7':
+//       additem('Tv');
+//       break;
+//     case 'product8':
+//       additem('T-shirt');
+//       break;
+//     case 'product9':
+//       additem('radio');
+//       break;
+//     default:
+//       additem('head-sets');
+//   }
+// }
+
+
+
+// // Attach listener to all buttons with a product
+// document.querySelectorAll('button[data-product]').forEach(button => {
+//   button.addEventListener('click', collectData);
+// });
+
+  </script>
+</body>
+</html>

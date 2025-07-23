@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+    #body-div{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      justify-content: space-between;
+      gap: 10px;
+       background-color:rgb(226, 226, 255);
+       padding: 20px;
+    }
+
+    #calculateDiv{
+      width: 100%;
+       display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+    input{
+      padding: 3%;
+      color: black;
+      width: 60%;
+      border-radius: 5px;
+       padding: 3%;
+    }
+    button{
+      width:70% ;
+      padding: 3%;
+      background-color: rgb(145, 145, 249);
+      border-color: rgb(188, 188, 253);
+      border-radius: 13px;
+
+
+    }
+    
+    .result{
+
+background-color: rgb(236, 245, 242);
+height: auto;
+width: 80%;
+border: 2px solid black;
+    }
+    p{
+         background-color: white;
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+    }
+  </style>
+</head>
+ 
+<body>
+<div id="body-div">
+  <center>
+  <p>this is a simple program that helps you to calculate the area of shap es what you need to do is to fill chose a shae and provide the necessaryn information reqiuredfor the calculation of your shpe then the application helps you to calculate the area of the shape</p>
+
+   </center>
+  <button onclick="Triangle()">Triangle</button>
+  <button onclick="rectangle()">rectangle</button>
+  <button onclick="square()">saquare</button>
+  <button onclick="circle()">circle</button>
+  <button onclick="trapezium()">trapezium</button>
+  <div id="calculateDiv"></div>
+   
+   <p class="input-fields"></p>
+   <p class="explanations"></p>
+   <p class="result"></p>
+   <p class="continue-another"></p>
+   <p class="alsert"></p>
+
+   </div>
+    
+   <script>
+    const MainDIV = document.getElementById('calculateDiv')
+    let inputs = document.querySelector('.input-fields');
+    const explanations = document.querySelector('.explanations');
+    let relsults = document.querySelector('.result');
+    const continuations = document.querySelector('.continue-another');
+
+
+    
+
+     let continueButton
+
+      
+    
+     function Triangle(){
+       
+    
+      let width;
+      
+     
+
+     
+      
+    let inputBase  = document. createElement('input')
+     inputBase.placeholder = 'Enter The length'
+     MainDIV.append(inputBase);
+    //  const Base = Number(inputBase.value) ;
+    inputBase.id = 'Base'     
+      let inputHeight  = document.createElement('input');
+      inputHeight.placeholder ='Enter the width'
+      MainDIV.append(inputHeight);
+      inputHeight.id = 'Height'
+
+      // const height =Number(inputHeight.value);
+
+      let calculateButton = document.createElement('button');
+      calculateButton.textContent = 'calculate';
+      MainDIV.append(calculateButton);
+      
+      
+      calculateButton.addEventListener('click' ,calculateAreaOfTiangle);
+
+
+      
+      
+      
+     }
+
+
+     function calculateAreaOfTiangle( ){
+      var Base, height;
+       Base = (document.getElementById('Base').value);
+       height = (document.getElementById('Height').value);
+      
+      if(!Base || !height){
+
+        alert('looks like one side of your trian gle is missing please field  please make sure you type in all sides');
+      }
+      else{
+        if(isNaN(Base)){
+          Base.style ='bold'
+          alert(`invalid input ${Base} is not an integer`)
+        }
+
+        else if(isNaN(height)){
+          alert('invalid input height is not an interger');
+        }
+
+        else{
+        //  else if(isNaN(Base) && isNaN(height)) {
+        //   alert(` invalid${Base}Base and ${height} are both non intergers` )
+        // }
+
+         let area = .5*Base*height
+         relsults.textContent = ` the area of your triangle is = ${area}`
+
+      }
+
+    }}
+
+
+
+
+
+     function rectangle(){
+
+     var inputlength  = document. createElement('input')
+     inputlength.placeholder = 'Enter The Base'
+     MainDIV.append(inputlength);
+     var length = (inputlength.value) ;
+     inputlength.id = 'length'
+     
+      var inputwidth  = document.createElement('input');
+      inputwidth.placeholder ='enter the width'
+      MainDIV.append(inputwidth);
+      // var width =Number(inputwidth.value);
+      inputwidth.id = 'width';
+
+
+      let calculateButton = document.createElement('button');
+      calculateButton.textContent = 'calculate';
+       MainDIV.append(calculateButton);
+      calculateButton.id ='calclateButton';
+      calculateButton.style = 'background-color = red';
+
+      
+      calculateButton.addEventListener('click' ,calculateAreaOfrectangle);
+
+     function calculateAreaOfrectangle(length, width, inputwidth, inputlength, ){
+    
+//determins the data type of the input field before(tells the browser that aonly numbers should be considered here )
+    //   var length = Number(document.getElementById('length').value);
+  
+    //  var width = Number(document.getElementById('width').value);
+
+
+    var length = Number(document.getElementById('length').value);
+  
+     var width = Number(document.getElementById('width').value);
+
+      if(length && width){
+        if(isNaN(width)){
+          alert(`invalid input ${Base} is not an interger`)
+          
+        }
+        else if(isNaN(length)){
+          alert(`invalid input ${lenght} is not an interger`)
+        }
+         area = length *width;
+         relsults.textContent = ` the area of your triangle is = ${area}`
+        
+        
+      }
+      else{
+       alert('looks like one side of your trian gle is missing please field  please make sure you type in all sides'); 
+
+        
+      }
+
+     }
+        
+      
+
+     }
+
+     function square(){
+        let side = 4;
+      let area = side * side;
+      
+      var inputside = document.createElement('input');
+      inputside.placeholder = 'Enter Side';
+       MainDIV.appendChild(inputside);
+      //  side = Number(inputside.value);
+      
+       let calculateButton = document.createElement('button');
+      calculateButton.textContent = 'calculate';
+      MainDIV.append(calculateButton);
+      
+      
+      calculateButton.addEventListener('click' ,calculateAreaOfsquare);
+
+     function calculateAreaOfsquare(side, area ){
+       var side = (inputside.value);
+      
+      if(side){
+       
+        if(isNaN(side)){
+         alert('invalid input please Enter a valid number');
+        
+        
+        }else{
+           area = side **2;
+         relsults.textContent = ` the area of your triangle is = ${area}`
+        
+          
+        }
+      }else{
+        alert('please fill is required to  be filled');
+      }
+     
+
+     }
+    }
+    function circle(){
+      
+      
+      var circleinput = document.createElement('input');
+      circleinput.placeholder = ' Enter the radius'
+      MainDIV.append(circleinput);
+       Number(circleinput.value);
+
+      let calculateButton = document.createElement('button');
+      calculateButton.textContent = 'calculate';
+      MainDIV.append(calculateButton);
+      
+      
+      calculateButton.addEventListener('click' ,calculateAreaOfcircle);
+      
+       
+
+    
+
+
+    function calculateAreaOfcircle(){
+    //  let radius;
+    let radius =(circleinput.value);
+
+     let area;
+
+     
+      
+      if(radius){
+        
+       if(!isNaN(radius)){
+        area = (22 * radius * radius)/7;
+
+      relsults.textContent = `area = ${area}`
+       }else{
+
+       
+        alert('invalid input Enter a valid number')
+        
+       }
+
+      }else{
+        console.log('please')
+        alert('please fill in this field to have your area');
+      }
+
+
+
+    }
+  }
+
+    function trapezium(){
+
+      explanations.textContent = `your shape is a trape zium you are reqiured to fill in the following information will be expected to fill in the fields below`
+
+
+       inputlength = document. createElement('input')
+     inputlength.placeholder = 'Enter the longest side';
+     MainDIV.append(inputlength);
+     const length = Number(inputlength.value) ;
+     
+      let inputwidth  = document.createElement('input');
+      inputwidth.placeholder ='enter the width'
+      MainDIV.append(inputwidth);
+      const width =Number(inputwidth.value);
+
+      let inputHeight  = document.createElement('input');
+      inputHeight.placeholder ='enter the width'
+      MainDIV.append(inputHeight);
+      const height =Number(inputHeight.value);
+
+
+      let calculateButton = document.createElement('button');
+      calculateButton.textContent = 'calculate';
+      MainDIV.append(calculateButton);
+      calculateButton.id ='calclateButton';
+      calculateButton.style = 'background-color = red';
+
+      
+      calculateButton.addEventListener('click' ,calculateAreaOftrapezium);
+
+     function calculateAreaOftrapezium( ){
+      let length = 1 ;
+      let width = 10;
+      let height;
+     
+
+      let area = length * width;
+      if(length && width && height){
+         let area = length *width;
+         relsults.textContent = ` the area of your triangle is = ${area}`
+        
+        
+      }
+      else{
+       alert('looks like one side of your trapezium is missing please field  please make sure you type in all sides'); 
+
+        
+      }
+
+     }
+        
+      
+
+     }
+
+
+    function provideIputfields(){
+       
+      
+
+
+
+    }
+   </script>
+
+
+
+</body>
+
+</html>
