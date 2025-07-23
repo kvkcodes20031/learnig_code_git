@@ -29,15 +29,24 @@
   <script>
 
  
-    person = {
+    let person = {
     
     }
+    let people= [];
+    
+     
+    person = JSON.parse(localStorage.getItem('person'));
+    console.log(people)
+
+
     // console.log(JSON.parse(localStorage.getItem('person')));
 
     localStorage.getItem('object')
-    console.log(localStorage.getItem('object'))
-
+    console.log(localStorage.getItem('person'))
+    
     function undeFined() {
+
+      
       
     let psnfirstName = document.getElementById('firstName');
     psnfirstName.value;
@@ -70,16 +79,26 @@
        person. Email = emailAddress.value
        person.Address = personAddress.value
        person.DateOfBirth = DOB.value
+
+      
     
-    console.log(psnfirstName.value, psnlastName.value, phonecontact.value, emailAddress, personAddress, DOB.value, person.name() );
+    // onsole.log(psnfirstName.value, psnlastName.value, phonecontact.value, emailAddress, personAddress, DOB.value, person.ncame() );
 
     console.log(person)
     let storagefield = document.getElementById('Friends');
-    let StorePerson = storagefield
+    people.push(person)
 
     storagefield.innerHTML += `Name:<b style = "color: red;">${person.name()} </b> <br>First Name: ${person.firstName} <br> <br>last Name:${person.lastName} 
     <br><br> Contact: ${person.contact} <br> <br>Email:${ person. Email} <br><br> Adress: ${person.Address} <br><br> Birthday:${person.DateOfBirth}`
-    JSONstring = JSON.stringify(person);
+    
+    localStorage.setItem('person', JSON.stringify(person))
+
+     
+    
+
+  //  JSONstring  = JSON.stringify(person);
+  //   console.log(JSONstring);
+
     
     // localStorage.setItem('oject', 'student');
     
