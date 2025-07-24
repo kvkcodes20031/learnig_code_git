@@ -23,10 +23,13 @@ let num3 = 5
  
 
 console.log(num3)
-   
+  var Object1 = {
+    name: 'valerie',
+    id: 100
+  }
   
-    console.log(localStorage.getItem('object'))
-    localStorage.setItem('object', 'student');
+    console.log(JSON.parse( localStorage.getItem('object')))
+    localStorage.setItem('object', JSON.stringify(Object1));
   </script>
 </body>
 </html>

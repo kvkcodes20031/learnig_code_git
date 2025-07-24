@@ -116,9 +116,9 @@
   }
     
 
-  guessCount ++;
-  guessField.value = "";
-  guessField.focus();
+     guessCount ++;
+  // guessField.value = "";
+  // guessField.focus();
     
 }
   }
@@ -127,34 +127,34 @@ guessSubmit.addEventListener("click" , checkGuess);
   
 
 
-function setGameOver(){
+// function setGameOver(){
 
-  guessField.disabled = true;
-  guessSubmit.disabled = true;
-  resetButton = document.createElement("button");
-  resetButton.textContent = "start new game";
-  document.body.append(resetButton);
-  resetButton.addEventListener("click", resetGame);
+//   guessField.disabled = true;
+//   guessSubmit.disabled = true;
+//   resetButton = document.createElement("button");
+//   resetButton.textContent = "start new game";
+//   document.body.append(resetButton);
+//   resetButton.addEventListener("click", resetGame);
 
 
-}
-   function resetGame(){
-   guessCount = 1;
-   const resetparas = document.querySelectorAll(".resultparas p");
-   for(const resetpara of resetparas){
-   resetpara.textContent = "";
-  }
+// }
+// //    function resetGame(){
+//    guessCount = 1;
+//    const resetparas = document.querySelectorAll(".resultparas p");
+//    for(const resetpara of resetparas){
+//    resetpara.textContent = "";
+//   }
 
-  resetButton.parentNode.removeChild(resetButton);
-  guessField.disabled = false;
-  guessSubmit.disabled = false;
-  guessField.value = ""
-  guessField.focus();
-  lastResult.style.backgroundColor = "white";
+//   resetButton.parentNode.removeChild(resetButton);
+//   guessField.disabled = false;
+//   guessSubmit.disabled = false;
+//   guessField.value = ""
+//   guessField.focus();
+//   lastResult.style.backgroundColor = "white";
 
- randomnumber = Math.floor(Math.random()* 100) +1;
+//  randomnumber = Math.floor(Math.random()* 100) +1;
 
-}
+// }
 
 </script>   
 

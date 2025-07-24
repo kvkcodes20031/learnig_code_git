@@ -7,10 +7,25 @@
 </head>
 <body onload="console.log('this is the beging of DOM for me')">
   <script>
+
+
        window.onload = () => {
 
-        const heading = document
+        const heading = document.createElement('h1');
+        const headingText = document.createTextNode('big head');
+        heading.appendChild(headingText);
+        document.body.appendChild(heading);
        }
+       
+      function requestFullscreen(){
+        if(document.fullscreenEnabled){
+          videoelement.requestFullscreen();
+        }
+        else{
+          console.log('your browser connot use fullscreen')
+        }
+      }
+      
     
   </script>
 </body>
